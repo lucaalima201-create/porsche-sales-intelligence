@@ -1,14 +1,14 @@
 # Porsche Sales Intelligence — Dashboard Interativa
 
-![Dashboard principal](assets/screenshot-desktop.png)
+**Dashboard interativa em HTML único — consulte `index.html`.**
 
 > Dashboard educacional e independente para analisar 100 registros de vendas de veículos Porsche. Desenvolvida em **HTML, CSS e JavaScript puro**, em um único `index.html`, com dados incorporados e sem bibliotecas externas.
 
 ## 🌐 Dashboard publicada
 
-**Status:** aguardando publicação deste repositório no GitHub Pages.
+**Status:** código enviado ao repositório público; ativação do GitHub Pages pendente.
 
-Após criar o repositório `porsche-sales-intelligence` na conta `lucaalima201-create` e ativar o Pages, o endereço esperado é:
+Após ativar o Pages na conta `lucaalima201-create`, o endereço esperado é:
 
 **https://lucaalima201-create.github.io/porsche-sales-intelligence/**
 
@@ -74,17 +74,9 @@ O prompt inicial e as mudanças estão registrados em [PROMPTS.md](PROMPTS.md). 
 
 ## 🖼️ Evidências de funcionamento
 
-### Visão geral
+### Evidências de funcionamento
 
-![Painel desktop com indicadores e gráficos](assets/screenshot-desktop.png)
-
-### Exemplo de filtro aplicado: California (CA)
-
-![Painel com filtro Estado = CA](assets/screenshot-filtro-ca.png)
-
-### Versão celular
-
-![Dashboard em tela mobile](assets/screenshot-mobile.png)
+As capturas de tela desktop, filtro CA e versão mobile já foram geradas, mas ainda precisam ser anexadas à pasta `assets/` do repositório. A validação funcional está registrada em [VALIDACAO.md](VALIDACAO.md).
 
 **Testes executados:** renderização sem erros de JavaScript, conferência dos 100 registros, da receita total, dos seis controles, do gráfico por pagamento, seleção de `CA` (**16 vendas**), seleção de `Sem data` (**24 registros**), botão limpar, download de CSV e ausência de rolagem horizontal em tela de 390 px. Resultados detalhados em [VALIDACAO.md](VALIDACAO.md).
 
@@ -96,18 +88,15 @@ porsche-sales-intelligence/
 ├── README.md
 ├── PROMPTS.md
 ├── VALIDACAO.md
-├── dados/
-│   └── porsche_vendas_sanitizadas.csv
-└── assets/
-    ├── screenshot-desktop.png
-    ├── screenshot-filtro-ca.png
-    └── screenshot-mobile.png
+└── dados/
+    └── porsche_vendas_sanitizadas.csv
+
 ```
 
 ## 🚀 Como publicar com GitHub Pages
 
-1. Crie um repositório **público** chamado **`porsche-sales-intelligence`** em sua conta GitHub.
-2. Faça upload de **todos os arquivos e pastas** acima para a raiz do repositório, mantendo `index.html` na raiz.
+1. Os arquivos HTML, README, prompts, validação e CSV já foram enviados à raiz do repositório público.
+2. Opcionalmente, envie as três capturas para `assets/` como evidências visuais.
 3. Vá a **Settings → Pages** e, em **Build and deployment → Source**, escolha **Deploy from a branch**.
 4. Selecione **`main`** e **`/(root)`** e salve.
 5. Abra o link informado pelo GitHub Pages e confira filtros, tabela e gráficos.
