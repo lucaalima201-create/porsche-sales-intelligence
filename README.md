@@ -64,13 +64,6 @@ Para comparação oficial, substitua a base do exercício pelos campos sanitizad
 
 **Ferramenta:** ChatGPT, com geração de código e testes automatizados; **sem Canvas e sem agente personalizado**. O HTML foi produzido diretamente, sem copiar a implementação visual de terceiros.
 
-O prompt inicial e as mudanças estão registrados em [PROMPTS.md](PROMPTS.md). Resumo das decisões:
-
-1. Definir **três perguntas**, com um gráfico específico para cada uma, antes de montar o layout.
-2. Usar **HTML único** e JavaScript sem dependências externas, para funcionar no GitHub Pages ou offline.
-3. Adicionar indicadores, filtros cruzados, exportação de CSV e tabela paginada para permitir a auditoria dos dados.
-4. Preservar datas `INVALID`, distinguir **ano da venda** de **ano do modelo** e indicar que os preços estão em **USD**.
-5. Fazer testes automatizados dos cálculos, filtros, paginação, responsividade e exportação.
 
 ## 🖼️ Evidências de funcionamento
 
@@ -93,16 +86,6 @@ porsche-sales-intelligence/
 
 ```
 
-## 🚀 Como publicar com GitHub Pages
-
-1. Os arquivos HTML, README, prompts, validação e CSV já foram enviados à raiz do repositório público.
-2. Opcionalmente, envie as três capturas para `assets/` como evidências visuais.
-3. Vá a **Settings → Pages** e, em **Build and deployment → Source**, escolha **Deploy from a branch**.
-4. Selecione **`main`** e **`/(root)`** e salve.
-5. Abra o link informado pelo GitHub Pages e confira filtros, tabela e gráficos.
-6. Atualize a seção "Dashboard publicada" com o link realmente validado; para entregar à DIO, **envie o link do repositório**, não o link do Pages.
-
-Para executar localmente, abra [index.html](index.html) diretamente no Chrome, Edge ou Firefox.
 
 ## 🛠️ Tecnologias
 
