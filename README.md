@@ -4,15 +4,15 @@
 
 > Dashboard educacional e independente para analisar 100 registros de vendas de veículos Porsche. Desenvolvida em **HTML, CSS e JavaScript puro**, em um único `index.html`, com dados incorporados e sem bibliotecas externas.
 
-## 🌐 Dashboard publicada
+## 🌐 Dashboard Publicada
 
-**Status:** código enviado ao repositório público; ativação do GitHub Pages pendente.
+**Status: Publicada via GitHub Pages ✅**
 
-Após ativar o Pages na conta `lucaalima201-create`, o endereço esperado é:
+Acesse a dashboard interativa Porsche Sales Intelligence pelo link:
 
-**https://lucaalima201-create.github.io/porsche-sales-intelligence/**
+**[Porsche Sales Intelligence — Dashboard Interativa](https://lucaalima201-create.github.io/porsche-sales-intelligence/)**
 
-> O endereço acima é uma previsão do GitHub Pages, **não um link validado como publicado**. Substitua este aviso por "Publicado" após testar a página no navegador.
+A aplicação foi desenvolvida em HTML, CSS e JavaScript, com visual responsivo, indicadores de desempenho e filtros interativos para análise dos dados de vendas.
 
 ## 🎯 Perguntas de negócio
 
