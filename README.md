@@ -1,94 +1,43 @@
-# Porsche Sales Intelligence — Dashboard Interativa
+# Porsche Sales Intelligence · Atelier 04
 
-**Dashboard interativa em HTML único — consulte `index.html`.**
+Dashboard em **HTML único** com **HTML5 Canvas 2D**, filtros e análises exploratórias de 100 registros. Projeto educacional independente, sem vínculo com Porsche AG. O código foi refeito com referência conceitual e visual do [site Porsche Brasil](https://www.porsche.com/brazil/pt/) e dos [tokens de cor do Porsche Design System](https://designsystem.porsche.com/v4/tokens/color/), usando tipografia de sistema/Google Fonts (sem arquivos de fontes proprietárias).
 
-> Dashboard educacional e independente para analisar 100 registros de vendas de veículos Porsche. Desenvolvida em **HTML, CSS e JavaScript puro**, em um único `index.html`, com dados incorporados e sem bibliotecas externas.
+## Funcionalidades
 
-## 🌐 Dashboard Publicada
+- Filtros: **modelo Porsche, ano-modelo, cidade, pagamento, ano inicial e ano final da venda**.
+- **KPIs:** quantidade de vendas, receita em USD, ticket médio em USD e cidades ativas.
+- **Pergunta 1:** quais modelos mais são vendidos por cidade? Gráfico em Canvas com opção de agrupar por família ou versão exata.
+- **Pergunta 2:** qual ano-modelo mais saiu no período selecionado? Canvas vertical com ano-modelo e seletores independentes para ano da venda.
+- **Pergunta 3:** quais veículos aparecem mais em cada cidade? Card com empates e avisos de amostra pequena; lista clicável de cidades.
+- Gráfico de rosca do mix de famílias em Canvas, tabela de registros paginada e exportação CSV.
+- Os gráficos são desenhados em HTML5 Canvas. Dependências de JavaScript: **nenhuma**. A foto real do Porsche 718 Cayman GT4 RS vermelho/preto e as fontes web dependem de conexão com a internet, mas gráficos/dados/filtros não.
 
-**Status: Publicada via GitHub Pages ✅**
+## Dados e limites
 
-Acesse a dashboard interativa Porsche Sales Intelligence pelo link:
+- Base sanitizada utilizada nas versões anteriores do projeto; **100 registros**, com datas entre 2024–2027 e **24 datas não informadas**.
+- Algumas vendas têm datas posteriores a novembro de 2026; portanto, a base é de **estudo** e não deve ser anunciada como relatório real de vendas históricas.
+- Todos os valores são **USD** e as cidades são dos **Estados Unidos**, não do Brasil.
+- Sem filtro de período, as 24 vendas sem data entram no total; ao aplicar filtros pelo *ano da venda*, são excluídas porque não há ano verificável.
+- Ano-modelo e ano da venda são dimensões diferentes.
+- Muitas cidades têm uma ou duas vendas: os insights representam a frequência *dentro da amostra*, não preferência comprovada de mercado.
 
-**[Porsche Sales Intelligence — Dashboard Interativa](https://lucaalima201-create.github.io/porsche-sales-intelligence/)**
+## Como abrir e publicar
 
-A aplicação foi desenvolvida em HTML, CSS e JavaScript, com visual responsivo, indicadores de desempenho e filtros interativos para análise dos dados de vendas.
+1. Abra `index.html` no navegador (os filtros e gráficos funcionam mesmo offline; imagem hero e fontes podem não carregar sem internet).
+2. Para publicar, substitua somente o `index.html` na raiz da branch `main` do [repositório do projeto](https://github.com/lucaalima201-create/porsche-sales-intelligence). Confira o arquivo antigo antes de substituir.
+3. O GitHub Pages seguirá usando o mesmo URL: https://lucaalima201-create.github.io/porsche-sales-intelligence/
 
-## 🎯 Perguntas de negócio
+## Crédito e fontes de referência
 
-| Pergunta | Visualização | Por que importa? |
-| --- | --- | --- |
-| **1. Quais modelos geram mais receita?** | Barras horizontais: receita por modelo (USD) | Mostra quais veículos mais contribuem financeiramente para o mix de vendas. |
-| **2. Quais estados concentram mais vendas?** | Ranking por estado: número de registros | Identifica os mercados mais presentes na amostra. |
-| **3. Quais métodos de pagamento são mais usados?** | Gráfico de rosca com percentuais | Ajuda a entender os meios de pagamento predominantes. |
+- Referência estética: https://www.porsche.com/brazil/pt/
+- Tokens e diretrizes públicas: https://designsystem.porsche.com/v4/
+- Fotografia real do **Porsche 718 Cayman GT4 RS vermelho e preto**: [Porsche Finder](https://finder.porsche.com/de/de-DE/details/porsche-718-cayman-gt4-rs-gebraucht-9XPP2W), imagem exibida diretamente da hospedagem externa da Porsche (`images.finder.porsche.com`), sem copiar os bytes da fotografia para o repositório. O uso da imagem no portfólio deve respeitar os direitos do fotógrafo/titular. Se a URL externa ficar indisponível, o fundo gráfico em CSS permanece legível. A imagem não implica patrocínio ou vínculo oficial.
+- Marcas nominativas citadas somente como referência ao conjunto de dados e projeto de estudo.
 
-As três visualizações, os indicadores e a tabela são atualizados simultaneamente ao aplicar os filtros.
+## Conteúdo
 
-## ✨ Funcionalidades
-
-- **6 filtros combináveis:** modelo, estado, cidade, ano do modelo, ano da venda e pagamento.
-- **4 indicadores principais:** vendas, receita registrada, ticket médio e estados atendidos.
-- **3 visualizações de negócio** com leitura automática do líder de cada ranking.
-- **Tabela paginada** para conferir cada registro e os dados exibidos.
-- **Exportação CSV** da seleção atual, sem depender de servidor.
-- **Botão de limpar filtros**, tratamento de seleções sem resultados e destaque de datas inválidas.
-- **Layout responsivo**, paleta grafite, preto, branco e vermelho, e tipografia de sistema.
-- **Execução offline:** basta abrir `index.html` no navegador.
-
-## 📊 Base e principais números
-
-| Indicador | Total da base |
-| --- | ---: |
-| Registros de vendas | **100** |
-| Receita registrada | **US$ 12.827.800,50** |
-| Ticket médio por venda | **US$ 128.278,01** |
-| Estados diferentes | **33** |
-| Datas inválidas | **24** |
-
-> Estes valores são derivados da **base de exercício** e não representam dados oficiais da Porsche. Receita é soma dos preços registrados, sem deduções, e não representa lucro ou faturamento efetivamente realizado.
-
-### Proveniência e tratamento dos dados
-
-- **Base do enunciado:** [planilha Porsche disponibilizada pela DIO](https://hermes.dio.me/files/assets/8683bed0-cc33-4e06-bca9-04db9c31f9e2.xlsx).
-- **Fonte efetivamente processada nesta implementação:** os **100 registros sanitizados embutidos** no HTML público do projeto educacional [`michaelfellype/dashboard_porsche_sales`](https://github.com/michaelfellype/dashboard_porsche_sales/blob/main/index.html), que documenta uso da base do mesmo desafio. **O download direto da planilha da DIO não foi possível neste ambiente**; por isso, a equivalência registro a registro com o XLSX original ainda não foi verificada aqui.
-- **Colunas mantidas:** `id`, `date`, `model`, `year`, `price`, `payment`, `city`, `state`.
-- **Colunas descartadas:** quaisquer informações de clientes, vendedores ou outros campos brutos/sensíveis não necessários à análise.
-- **Normalizações:** `price` em número decimal e USD, `year` em número inteiro; datas ISO `AAAA-MM-DD` ou ausentes para `INVALID`.
-- **Datas inválidas:** 24 registros continuam nas métricas gerais; quando um ano da venda é escolhido, aparecem somente as datas correspondentes (inclusive a opção **Sem data**).
-- **Datas futuras:** mantidas como aparecem no conjunto de exercício, inclusive em 2027; não significam vendas realizadas no mundo real.
-- **Sem fórmulas do Excel:** o CSV usa valores simples; a página embute todos os 100 objetos JavaScript como valores.
-
-Para comparação oficial, substitua a base do exercício pelos campos sanitizados diretamente no XLSX original antes de uma submissão que exija essa verificação.
-
-## 🤖 IA utilizada, prompt e refinamentos
-
-**Ferramenta:** ChatGPT, com geração de código e testes automatizados; **sem Canvas e sem agente personalizado**. O HTML foi produzido diretamente, sem copiar a implementação visual de terceiros.
-
-
-## 🖼️ Evidências de funcionamento
-
-### Evidências de funcionamento
-
-As capturas de tela desktop, filtro CA e versão mobile já foram geradas, mas ainda precisam ser anexadas à pasta `assets/` do repositório. A validação funcional está registrada em [VALIDACAO.md](VALIDACAO.md).
-
-**Testes executados:** renderização sem erros de JavaScript, conferência dos 100 registros, da receita total, dos seis controles, do gráfico por pagamento, seleção de `CA` (**16 vendas**), seleção de `Sem data` (**24 registros**), botão limpar, download de CSV e ausência de rolagem horizontal em tela de 390 px. Resultados detalhados em [VALIDACAO.md](VALIDACAO.md).
-
-## 📁 Estrutura
-
-```text
-porsche-sales-intelligence/
-├── index.html
-├── README.md
-├── PROMPTS.md
-├── VALIDACAO.md
-└── dados/
-    └── porsche_vendas_sanitizadas.csv
-
-```
-
-
-## 🛠️ Tecnologias
-
-HTML5 · CSS3 · JavaScript ES2020 · SVG · GitHub Pages (publicação)
-
-**Aviso:** projeto educacional independente, sem vínculo com a Porsche AG.
+- `index.html` — versão final para GitHub Pages
+- `porsche_vendas_sanitizadas.csv` — base auditável
+- `README.md` — funcionalidades e metodologia
+- `VALIDACAO.md` — checklist de testes
+- `preview-desktop.png`, `preview-mobile.png` — capturas de tela da versão quando disponíveis
