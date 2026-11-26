@@ -1,6 +1,6 @@
-# Porsche Sales Intelligence · Atelier 04
+# Porsche Sales Intelligence · Midnight GT4 RS
 
-Dashboard em **HTML único** com **HTML5 Canvas 2D**, filtros e análises exploratórias de 100 registros. Projeto educacional independente, sem vínculo com Porsche AG. O código foi refeito com referência conceitual e visual do [site Porsche Brasil](https://www.porsche.com/brazil/pt/) e dos [tokens de cor do Porsche Design System](https://designsystem.porsche.com/v4/tokens/color/), usando tipografia de sistema/Google Fonts (sem arquivos de fontes proprietárias).
+Dashboard com identidade visual **dark premium** em **HTML único** com **HTML5 Canvas 2D**, filtros e análises exploratórias de 100 registros. Projeto educacional independente, sem vínculo com Porsche AG. O código foi refeito com referência conceitual e visual do [site Porsche Brasil](https://www.porsche.com/brazil/pt/) e dos [tokens de cor do Porsche Design System](https://designsystem.porsche.com/v4/tokens/color/), usando tipografia de sistema/Google Fonts (sem arquivos de fontes proprietárias).
 
 ## Funcionalidades
 
@@ -41,3 +41,18 @@ Dashboard em **HTML único** com **HTML5 Canvas 2D**, filtros e análises explor
 - `README.md` — funcionalidades e metodologia
 - `VALIDACAO.md` — checklist de testes
 - `preview-desktop.png`, `preview-mobile.png` — capturas de tela da versão quando disponíveis
+
+## Atualização visual · Midnight Edition (26/11/2026)
+
+- Tema escuro aplicado **a todo o site**: navegação, seções, painéis, KPIs, filtros, tabela, ranking, rodapé e cores internas dos três gráficos Canvas.
+- Cores dominantes: preto profundo (`#080a0e`), grafite (`#171b22`) e vermelho esportivo (`#ec2948`) em pequenos destaques.
+- Capa: tentativa progressiva de carregar imagem de alta resolução do Porsche 718 Cayman GT4 RS vermelho/preto via Porsche Finder (`3840`, `2560`, `1920`), evitando aceitar miniaturas inferiores a 1600 px como se fossem HD.
+- Quando a Porsche Finder não serve fotos maiores, o sistema tenta uma imagem real alternativa de resolução alta de [Collecting Cars](https://collectingcars.com/for-sale/2023-porsche-718-cayman-gt4-rs-2) e [Porsche Newsroom](https://newsroom.porsche.com/en_AU/2023/products/porsche-718-cayman-gt4-rs-product-highlights-30846.html). A miniatura Porsche Finder de 960 px é recurso de emergência. Todas as fotos são externas e sujeitos a licenças/direitos dos respectivos titulares.
+- A imagem externa não pôde ser carregada no navegador de teste local (restrição de rede), então é importante conferir a nitidez na versão publicada.
+
+### Publicação
+
+- GitHub Pages: https://lucaalima201-create.github.io/porsche-sales-intelligence/
+- Repositório: https://github.com/lucaalima201-create/porsche-sales-intelligence
+
+Projeto educacional independente, não afiliado à Porsche.
