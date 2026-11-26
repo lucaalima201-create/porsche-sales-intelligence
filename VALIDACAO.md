@@ -1,32 +1,27 @@
-# Verificação funcional
+# Validação técnica · Atelier 04
 
-Testes feitos em Chromium headless sobre o HTML completo, incluindo execução do script e inspeção dos elementos renderizados.
+Testada no Chromium por meio do Playwright em 26/11/2026, com as conexões externas bloqueadas para comprovar que os dados e gráficos não dependem da internet.
 
-| Cenário | Resultado |
-| --- | --- |
-| HTML inicia sem erro de JavaScript | **Passou** |
-| Total inicial de vendas | **100** |
-| Receita total inicial | **US$ 12.827.800,50** |
-| Ticket médio inicial | **US$ 128.278,01** |
-| Estados atendidos | **33** |
-| Datas inválidas sinalizadas | **24** |
-| Gráfico de modelos | **8 barras visíveis (40 modelos)** |
-| Ranking de estados | **8 barras visíveis (33 estados)** |
-| Gráfico de pagamentos | **9 segmentos/legendas** |
-| Filtros disponíveis | **Modelo, estado, cidade, ano do modelo, ano da venda, pagamento** |
-| Selecionar estado CA | **16 vendas; US$ 1.973.350,00** |
-| Combinar CA e 911 Dakar | **1 venda** |
-| Limpar filtros | **Retorno às 100 vendas** |
-| Selecionar ano da venda = Sem data | **24 vendas** |
-| Exportar CSV filtrado | **Download de `porsche-vendas-filtradas.csv` disparado** |
-| Renderização mobile 390 px | **Sem overflow horizontal** |
+- [x] Dados embutidos: 100 vendas, US$ 12.827.800,50 de receita, 79 cidades, 24 datas ausentes.
+- [x] Total de vendas, receita compacta + receita exata, ticket médio e cidades atualizam com filtros.
+- [x] Quatro filtros temáticos e intervalo de ano de venda (seis controles combináveis).
+- [x] Filtros de data usam ano da VENDA; gráfico usa ano-MODELO; dados sem data não entram em períodos selecionados.
+- [x] Gráficos de famílias/versões, ano-modelo e mix de famílias desenhados em HTML5 Canvas 2D, sem bibliotecas de gráficos.
+- [x] Cidade Boston: 2 vendas e empate entre famílias 718 e 911; alerta de amostra pequena exibido.
+- [x] Seleção vazia: 0 vendas sem exceções JavaScript.
+- [x] Botões Famílias/Versões, Limpar filtros e reset verificados.
+- [x] Exportação CSV gerou arquivo com cabeçalho e 100 registros.
+- [x] Visual renderizado em desktop (1440 px) e celular (390 px); nenhuma rolagem horizontal no celular.
+- [x] Nenhum erro de JavaScript observado durante os testes.
+- [ ] Testar visual da fotografia remota no GitHub Pages com internet disponível.
+- [ ] Publicar no repositório do usuário (não modificado durante esta atualização).
 
-## Pontos para conferir após a publicação
+Observação: fotografias e fontes externas não foram carregadas no ambiente de teste. A interface possui estilos de fallback e ilustração vetorial própria.
 
-1. Abrir a URL gerada pelo Pages sem erro 404.
-2. Confirmar que o botão de limpar restaura 100 registros.
-3. Aplicar o filtro `Estado = CA` e conferir 16 vendas.
-4. Clicar em `EXPORTAR CSV` e abrir o download.
-5. Conferir se as imagens e arquivos documentados no README existem no repositório.
 
-Os screenshots em `assets/` são evidências das versões desktop, com filtro `CA` e mobile. O uso de uma cópia pública sanitizada da base, em vez de leitura direta do XLSX da DIO, está declarado no README.
+## Atualização da capa (26/11/2026)
+
+- Ilustração genérica SVG removida da capa.
+- CSS utiliza fotografia externa do 718 Cayman GT4 RS vermelho/preto via Porsche Finder.
+- Link da fonte da imagem incluído no rodapé; depende de rede e disponibilidade da origem.
+- Ainda é necessário conferir o carregamento da imagem no GitHub Pages com acesso à rede.
